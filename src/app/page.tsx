@@ -5,7 +5,7 @@ import Featured from "./_components/Featured";
 
 export default function Home() {
   return (
-   <div>
+   <div className="container max-auto">
         <Carousal/>
         <Category/>
         <Featured/>

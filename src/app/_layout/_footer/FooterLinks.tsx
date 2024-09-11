@@ -19,7 +19,7 @@ const FooterLinks = () => {
   return (
     <div>
       {footerLink.map((i,idx)=>(
-        <Link className='p-3' href={i.link}>{i.name}</Link>
+        <Link key={idx} className='p-3' href={i.link}>{i.name}</Link>
       ))}
     </div>
   );

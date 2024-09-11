@@ -4,26 +4,28 @@ import womenImg from "../../../public/_categoryimages/women.jpg";
 import kidsImg from "../../../public/_categoryimages/kids.jpg";
 import accessoriesImg from "../../../public/_categoryimages/accessories.jpg";
 import CategoryCard from "./CategoryCard";
+import Link from "next/link";
 
 const Category = () => {
   const categoryList = [
     {
       image: menImg,
-      categoryName: "Men",
+      categoryName: "men",
     },
     {
       image: womenImg,
-      categoryName: "Women",
+      categoryName: "women",
     },
     {
       image: accessoriesImg,
-      categoryName: "Accessories",
+      categoryName: "accessories",
     },
     {
       image: kidsImg,
-      categoryName: "Kids",
+      categoryName: "kids",
     },
   ];
+
   return (
     <div className="md:p-10 flex flex-col items-center ">
       <div>
@@ -34,10 +36,12 @@ const Category = () => {
       </div>
       <div className="grid md:grid-cols-3 w-3/4 gap-5 md:h-3/4 h-1/2 grid-cols-1">
         <div className="" >
-          <CategoryCard
-            src={categoryList[0].image}
-            name={categoryList[0].categoryName}
-          />
+         
+            <CategoryCard
+              src={categoryList[0].image}
+              name={categoryList[0].categoryName}
+            />
+         
         </div>
         <div>
           <CategoryCard

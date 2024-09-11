@@ -1,5 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "**",
+          },
+          {
+            protocol: "http",
+            hostname: "**",
+          },
+        ],
+      },
     webpack(config) {
         const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'));
         config.module.rules.push(
